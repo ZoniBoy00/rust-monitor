@@ -48,7 +48,7 @@ fn load_config() -> Config {
 
 fn collect_stats(sys: &mut System) -> Stats {
     sys.refresh_cpu_specifics(CpuRefreshKind::nothing());
-    sys.refresh_memory_specifics(MemoryRefreshKind::nothing());
+    sys.refresh_memory_specifics(MemoryRefreshKind::everything());
 
     let uptime_secs = System::uptime();
     let uptime = format_uptime(uptime_secs);
